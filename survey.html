@@ -1,16 +1,21 @@
 <html>
     <head>
         <title>survey app</title>
-        
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
-        <br/><br/><br/>
+        <br/><br/>
+        <div class="container">
+            <header>
+                <div class="pull-left">SURVEY</div>
+                <div class="pull-right">Web Club Task</div>
+            </header>
         <div class="qPanel">
-            <div style="font-size:20pt;">Quiz</div>
-             <div class="ques" id="question"> 
-             </div>
+            
+             <h3 class="ques" id="question"> 
+             </h3>
              <div><input type="radio" id="opt1" name="options">
                 <span id="optt1"></span>
             </div>
@@ -21,8 +26,13 @@
                 <span id="optt3"></span>
             </div>
             <div class="lftCss">
+                <br/>
             <button class="nxtBtn" onclick="checkAnswer()"> Continue ></button>
             </div>
+        </div>
+        <footer>
+            <div class="pull-left">Total: 5 Questions</div>
+        </footer>
         </div>
         <script src="data.js"></script>
         <script src="survey.js"></script>

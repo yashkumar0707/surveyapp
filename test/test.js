@@ -12,41 +12,49 @@ function generate(index)
     document.getElementById("optt3").innerHTML = jsonData[index].opt3;
 }
 
-function checkAnswer() {
+function checkAnswer()
+{   if(i<=4)
+        {
     console.log('yash');
     console.log(jsonData[i].opt1);
-        if (document.getElementById("opt1").checked && jsonData[i].opt1 == jsonData[i].answer) 
-        { var a=i+'A';
-            th()
+        if (document.getElementById("opt1").checked) 
+        { var a=(i+1)+'A';
+            th(a);
        correctCount++;
        console.log(correctCount);
     }
-    if (document.getElementById("opt2").checked && jsonData[i].opt2 == jsonData[i].answer) 
-    {
+    if (document.getElementById("opt2").checked ) 
+    {   var a=(i+1)+'B';
+        th(a);
         correctCount++;
         console.log(correctCount);
     }
-    if (document.getElementById("opt3").checked && jsonData[i].opt3 == jsonData[i].answer) {
+    if (document.getElementById("opt3").checked )
+     {
+        var a=(i+1)+'C';
+            th(a);
         correctCount++;
         console.log(correctCount);
     }
     // increment i for next question
-    i++;
-    if(jsonData.length-1 < i){
+    if(i==4)
+    {
         /*console.log(correctCount);
         document.write("<body style='background-color:#348322;'>");
         document.write("<div style='color:#ffffff;font-size:18pt;text-align:center;'>*****Your score is : "+correctCount+"*****</div>");
         document.write("</body>");*/
         document.getElementById("question").innerHTML="*****Your score is : "+correctCount+"*****";
-        document.getElementById("optt1").innerHTML = jsonData[index].opt1;
-        document.getElementById("optt2").innerHTML = jsonData[index].opt2;
-        document.getElementById("optt3").innerHTML = jsonData[index].opt3;
+        document.getElementById("optt1").innerHTML = jsonData[i].opt1;
+        document.getElementById("optt2").innerHTML = jsonData[i].opt2;
+        document.getElementById("optt3").innerHTML = jsonData[i].opt3;
     }
-    // callback to generate
-    generate(i);
+    else
+    {// callback to generate
+    generate(++i);
 
+    }
 }
-
+}
 function th(d)
 {
     console.log(d);

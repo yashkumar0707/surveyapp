@@ -30,10 +30,14 @@ function checkAnswer() {
     // increment i for next question
     i++;
     if(jsonData.length-1 < i){
-        console.log(correctCount);
+        /*console.log(correctCount);
         document.write("<body style='background-color:#348322;'>");
         document.write("<div style='color:#ffffff;font-size:18pt;text-align:center;'>*****Your score is : "+correctCount+"*****</div>");
-        document.write("</body>");
+        document.write("</body>");*/
+        document.getElementById("question").innerHTML="*****Your score is : "+correctCount+"*****";
+        document.getElementById("optt1").innerHTML = jsonData[index].opt1;
+        document.getElementById("optt2").innerHTML = jsonData[index].opt2;
+        document.getElementById("optt3").innerHTML = jsonData[index].opt3;
     }
     // callback to generate
     generate(i);

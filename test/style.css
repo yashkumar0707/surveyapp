@@ -1,0 +1,44 @@
+body
+{
+    font-family: arial;
+    font-size: 18px;
+    line-height: 1.6em;
+    background: #fff8dc;
+}
+h2
+{
+    text-align: center;
+}
+.container
+{
+    width:70%;
+    margin: 20px auto;
+    overflow:auto;
+}
+
+.pull-left
+{
+    float:left;
+}
+
+.pull-right
+{
+    float: right;
+}
+
+header
+{
+    background: #1f88f4;
+    color: #ffffff;
+    padding: 7px 12px;
+    overflow:auto;
+    font-size: 20px;
+}
+
+footer
+{
+    background: #1f88f4;
+    color: #ffffff;
+    padding: 5px 10px;
+    overflow:auto; 
+}

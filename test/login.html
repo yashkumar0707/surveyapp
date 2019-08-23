@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <title>survey app</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+      </head>
+    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+        <br/><br/>
+        <h2 class="op">Survey APP</h2>
+        <div class="container">
+            <header>
+                <div class="pull-left">Survey</div>
+                <div class="pull-right">Web Club Task</div>
+            </header>
+        <div class="qPanel">
+            <form action=checkAnswer()>    
+             Username <input type="textbox" id="user">
+             <br/>
+             Password <input type="password" id="pass">
+            </div>
+            <div class="lftCss">
+               
+            <button class="nxtBtn" onclick="checkAnswer()"> Continue ></button>
+            </div>
+        </form>
+
+        
+        <footer>
+            <div class="pull-left">Total: 5 Questions</div>
+        </footer>
+        </div>
+    </div>
+        <script src="data.js"></script>
+       
+        <script>
+         //Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAt3o9rYXYMrtusJ62CxlyUoaonF7c8NRE",
+    authDomain: "tutorial-a3cd6.firebaseapp.com",
+    databaseURL: "https://tutorial-a3cd6.firebaseio.com",
+    projectId: "tutorial-a3cd6",
+    storageBucket: "tutorial-a3cd6.appspot.com",
+    messagingSenderId: "352490651268",
+    appId: "1:352490651268:web:7cf5850af62ba8a5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db=firebase.firestore();
+  db.settings({timestampsInSnapshots: true})
+  </script>
+    </body>
+    </html>
+  
+</script>
+        <script src="login.js"></script>
+    </body>
+</html>

@@ -9,6 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
+        <script type=text/javascript>
+            function checkjs()
+            {
+                var a=check();
+                console.log(a);
+                if(a.trim()=="valid")
+                console.log ("logeed in");
+                else
+                console.log("nolog");
+            
+             }
+        </script>
         <br/><br/>
         <h2 class="op">Survey APP</h2>
         <div class="container">
@@ -17,18 +29,16 @@
                 <div class="pull-right">Web Club Task</div>
             </header>
         <div class="qPanel">
-            <form id="check">    
+            <form id="check" >    
              Username <input type="textbox" id="user">
              <br/>
              Password <input type="password" id="pass">
              <br/>
              <button> Continue ></button>
+             <div id="hid" style="display: none;"><a href="index.html">Start survey</a></div>
             </div>
             <div class="lftCss">
-               
-            
             </div>
-
         </form>
             <h4 id="disp"></h4>
         

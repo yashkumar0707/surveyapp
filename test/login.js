@@ -12,13 +12,16 @@ function ex1()
 {
 var user=document.getElementById('user').value;
 var pass=document.getElementById('pass').value;
-setTimeout(ex,1000);
+//setTimeout(ex,1000);
+ex();
 db.collection('login').orderBy('user').get().then((snapshot) =>{
     snapshot.docs.forEach(doc =>
         {var b=doc.id; 
-        if(doc.data().user==user && doc.data().pass==pass)
+        if(doc.data().user==user )
         {   f=true;
-            if(doc.data().count==0)
+            if(doc.data().pass==pass)
+            {   
+                if(doc.data().count==0)
             {
             db.collection('login').doc(b).update({
                 count: 1
@@ -26,13 +29,18 @@ db.collection('login').orderBy('user').get().then((snapshot) =>{
             console.log(doc.data().count);
             document.getElementById('disp').innerHTML="valid";
             document.getElementById('hid').style.display = "block";
-            return true;      
+                 
             }
             else
             {   console.log("yashyashay");
-                document.getElementById('disp').innerHTML="invalid";
+                document.getElementById('disp').innerHTML="Already taken the survey";
                 console.log(f);
-                return true;
+                
+            }
+            }
+            else
+            {
+                document.getElementById('disp').innerHTML="incorrect password";
             }
         }
        

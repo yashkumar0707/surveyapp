@@ -13,3 +13,10 @@ This is a node file which refreshes the pages dynamically and stores every users
 The beautification factor
 ### Test folder
 Used for running a few test cases
+
+## How to use the survey app
+**Step 1**- Sign in / Sign up successfully.<br/>
+            One user can take the survey only once.<br/>
+**Step2**- CLick on the start survey button<br/>
+**Step3**- Complete the survey.<br/>
+**Step4**- Result will be displayed.

@@ -12,8 +12,7 @@ function ex1()
 {
 var user=document.getElementById('user').value;
 var pass=document.getElementById('pass').value;
-//setTimeout(ex,1000);
-ex();
+setTimeout(ex,1000);
 db.collection('login').orderBy('user').get().then((snapshot) =>{
     snapshot.docs.forEach(doc =>
         {var b=doc.id; 

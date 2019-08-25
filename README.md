@@ -15,8 +15,10 @@ The beautification factor
 Used for running a few test cases
 
 ## How to use the survey app
-**Step 1**- Sign in / Sign up successfully.<br/>
+**Step 1**- Open the login.html<br/> 
+            Sign in / Sign up successfully.<br/>
             One user can take the survey only once.<br/>
-**Step2**- CLick on the start survey button<br/>
+**Step2**- CLick on the start survey button.<br/>
+            This redirects you to the survey<br/>
 **Step3**- Complete the survey.<br/>
 **Step4**- Result will be displayed.

@@ -98,7 +98,7 @@ function rendercafe(doc)
     // setting the document id from firestore
     li.setAttribute('data-id', doc.id);
    
-    a.textContent=doc.data().name+" Users chose this option "+doc.data().count;
+    a.textContent=doc.data().name+"- Number of users that chose this option ->"+doc.data().count;
     //appending
     li.appendChild(a);  
     cafelist.appendChild(li);
